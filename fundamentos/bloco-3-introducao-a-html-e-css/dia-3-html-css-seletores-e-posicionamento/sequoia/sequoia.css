@@ -1,0 +1,18 @@
+#sequoia {
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.sequoia {
+    font-weight: bold;
+    color: green;
+}
+
+.paragrafos {
+    background-color: greenyellow;
+    width: 80%;
+    height: 200px;
+    overflow: auto;
+    text-align: justify;
+}

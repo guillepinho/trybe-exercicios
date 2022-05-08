@@ -1,0 +1,15 @@
+h1, p {
+    text-align: center;
+}
+
+ol:hover {
+    background-color: lightblue;
+}
+
+li:active {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ol, ul {
+    list-style: none;
+}
