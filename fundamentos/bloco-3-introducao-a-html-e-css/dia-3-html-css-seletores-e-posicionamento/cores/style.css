@@ -1,0 +1,31 @@
+div:hover {
+    border: 4px solid;
+}
+
+#azul {
+    border-color: blue;
+    font-style: italic;
+}
+
+#verde {
+    border-color: green;
+}
+
+#vermelho {
+    border-color: red;
+    padding: 20px 0px;
+    font-style: italic;
+}
+
+#azuldark {
+    border-color: darkblue;
+}
+
+#azullight {
+    border-color: lightblue;
+    font-style: italic;
+}
+
+h3 {
+    font-family: monospace;
+}
