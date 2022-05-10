@@ -1,0 +1,179 @@
+body {
+    width: 80%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    clear: both;
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5bb9f390da50d330b261fdc8/1615231295778-RDJE1L1L5HCNAWAST0RD/90+copy.jpg');
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:visited {
+    color: inherit;
+}
+
+header {
+    width: 99%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    background-color: white;
+    border: 4px;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu {
+    width: 99%;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    background-color: white;
+    border: 4px;
+    border-radius: 4px;
+}
+
+.menu-link {
+    padding: 10px 40px;
+    background-color: cornflowerblue;;
+    border: 4px;
+    border-radius: 4px;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+article {
+    float: left;
+    width: 65%;
+    padding: 20px;
+    text-align: justify;
+    background-color: lightblue;
+    border: 4px;
+    border-radius: 4px;
+}
+
+aside {
+    float: right;
+    width: 27%;
+    padding: 20px;
+    background-color:lightgray;
+    border: 4px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.aside-bar {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 4px;
+    border-radius: 4px;
+}
+
+.general {
+    background-color: whitesmoke;
+    border: 4px;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.fun-fact {
+    background-color: whitesmoke;
+    border: 4px;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.data {
+    background-color: whitesmoke;
+    border: 4px;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ref {
+    background-color: whitesmoke;
+    border: 4px;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ref-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+caption {
+    display: block;
+}
+
+tr,
+th,
+td {
+    text-align: center;
+    width: 100px;
+    border: 2px solid black;
+}
+
+th {
+    font-weight: bold;
+    background-color: rgb(76, 114, 184);
+    color: white;
+}
+
+.ord {
+    font-weight: bold;
+    background-color: rgb(76, 114, 184);
+    color: white;
+}
+
+.data h3,
+.fun-fact h3,
+.general h3 {
+    text-align: center;
+    margin-block-start: 0.5em;
+    margin-block-end: 1em;
+}
+
+article h2 {
+    text-align: center;
+}
+
+.mantis {
+    margin: auto;
+    display: block;
+    width: 350px;
+}
+
+footer {
+    clear: both;
+    font-style: italic;
+    text-align: center;
+    line-height: 30px;
+}
