@@ -6,15 +6,15 @@ let baseIr;
 
 // INSS Calculation
 
-if (salary < 1556.94) {
+if (salary <= 1556.94) {
     inss = salary * 0.08;
     baseIr = salary - inss;
 }
-else if (salary < 2594.92) {
+else if (salary <= 2594.92) {
     inss = salary * 0.09;
     baseIr = salary - inss;
 }
-else if (salary < 5189.82) {
+else if (salary <= 5189.82) {
     inss = salary * 0.11;
     baseIr = salary - inss;
 }
@@ -47,4 +47,3 @@ else {
 }
 
 console.log(`The worker's net profit is: ${salary - inss - ir + deduct}`);
-
