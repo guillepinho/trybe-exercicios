@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p id="text">Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+        document.getElementById('text').innerText = 'Me vejo como um Full Stack Dev com status senior.';
+
+        document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
+
+        document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
+
+        document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
+
+        document.getElementById('text').style.fontWeight = 'bold';
+
+        const allP = document.getElementsByTagName('p');
+
+        for (let i = 0; i < allP.length; i += 1) {
+            console.log(allP[i].innerText);
+        } 
+    </script>
+  </body>
+</html>
