@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho">
+
+        </section>
+        <section id="segundoEUltimoFilhoDoFilho">
+
+        </section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho">
+
+      </section>
+      <section id="quartoEUltimoFilho">
+
+      </section>
+    </section>
+  </main>
+  <script>
+    const atv1 = document.getElementById('elementoOndeVoceEsta');
+    atv1.parentNode.parentNode.style.backgroundColor = 'red';
+    document.getElementById('primeiroFilhoDoFilho').innerText = 'um texto';
+    document.getElementById('pai').firstElementChild.innerText = 'primeiro filho acessado';
+    atv1.parentNode.style.color = 'white';
+    console.log(atv1.nextSibling);
+    console.log(atv1.nextElementSibling);
+    console.log(document.getElementById('pai').lastElementChild.previousElementSibling);
+
+    const createSectionBrother = document.createElement('p');
+    createSectionBrother.innerText = 'created brother';
+
+    const createSectionChild = document.createElement('p');
+    createSectionChild.innerText = 'create child';
+
+    const createSectionChildOfChild = document.createElement('p');
+    createSectionChildOfChild.innerText = 'create child of child';
+
+    const atv1Query = document.querySelector('#elementoOndeVoceEsta');
+
+    atv1Query.parentNode.appendChild(createSectionBrother);
+
+    atv1Query.appendChild(createSectionChild);
+
+    atv1Query.firstElementChild.appendChild(createSectionChildOfChild);
+
+    console.log(atv1Query.lastElementChild.parentNode.parentNode.lastElementChild.previousElementSibling.previousElementSibling);
+
+
+
+  </script>
+  A partir desse filho criado, acesse terceiroFilho.
+</body>
+
+</html>
