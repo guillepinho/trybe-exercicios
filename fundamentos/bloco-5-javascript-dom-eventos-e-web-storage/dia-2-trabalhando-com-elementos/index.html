@@ -57,54 +57,96 @@
   </head>
   <body>
     <script>
-        // 🚀 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+        // 🚀 1 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
         const body = document.body;
         const newH1 = document.createElement('h1');
         newH1.innerText = 'Exercício 5.2 - JavaScript DOM';
         body.appendChild(newH1);
 
-        // 🚀 Adicione a tag main com a classe main-content como filho da tag body;
+        // 🚀 2 Adicione a tag main com a classe main-content como filho da tag body;
         const newMain = document.createElement('main');
         newMain.className = 'main-content';
         body.appendChild(newMain);
 
-        // 🚀 Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+        // 🚀 3 Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
         const main = document.querySelector('.main-content');
         const centerSection = document.createElement('section');
         centerSection.className = 'center-content';
         main.appendChild(centerSection);
 
-        // 🚀 Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+        // 🚀 4 Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
         const section = document.querySelector('.center-content');
         const newP = document.createElement('p');
         newP.innerText = 'Texto teste';
         section.appendChild(newP);
 
-        // 🚀 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+        // 🚀 5 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
         const leftSection = document.createElement('section');
         leftSection.className = 'left-content';
         main.appendChild(leftSection);
 
-        // 🚀 Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+        // 🚀 6 Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
         const rightSection = document.createElement('section');
         rightSection.className = 'right-content';
         main.appendChild(rightSection);
 
-        // 🚀 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+        // 🚀 7 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
         const img = document.createElement('img');
         img.className = 'small-image'
         img.src = 'https://picsum.photos/200';
         section.appendChild(img);
 
-        // 🚀 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
-        // 🚀 Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+        // 🚀 8 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+        const numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const list = document.createElement('ul');
+        const rightContent = document.querySelector('.right-content');
+        rightContent.appendChild(list);
+        const ulList = document.querySelector('ul');
+
+        for (let i = 0; i < numList.length; i += 1) {
+          let newLi = document.createElement('li');
+          newLi.innerText = numList[i];
+          ulList.append(newLi);
+        }
+        
+        // 🚀 9 Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+        let text = '';
+        for (let i = 1; i <= 3; i += 1) {
+          text += `texto `;
+          let newH3 = document.createElement('h3');
+          newH3.innerText = text;
+          main.appendChild(newH3);
+        }
+
         // Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
-        // 🚀 Adicione a classe title na tag h1 criada;
-        // 🚀 Adicione a classe description nas 3 tags h3 criadas;
-        // 🚀 Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
-        // 🚀 Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
-        // 🚀 Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
-        // 🚀 Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.      
+        // 🚀 10 Adicione a classe title na tag h1 criada;
+        main.previousSibling.className = 'title';
+
+        // 🚀 11 Adicione a classe description nas 3 tags h3 criadas;
+        const firstH3 = main.lastElementChild;
+        const secondH3 = main.lastElementChild.previousElementSibling;
+        const thirdH3 = main.lastElementChild.previousElementSibling.previousElementSibling;
+
+        firstH3.className = 'description';
+        secondH3.className = 'description';
+        thirdH3.className = 'description';
+
+        // 🚀 12 Remova a section criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+        const leftContent = main.firstElementChild.nextElementSibling;
+        main.removeChild(leftContent);
+
+        // 🚀 13 Centralize a section criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto da section;
+        rightContent.style.marginRight = 'auto';
+
+        // 🚀 14 Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+        const centerContent = document.querySelector('.center-content');
+        centerContent.parentElement.style.backgroundColor = 'green';
+
+        // 🚀 15 Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+        const ulListChildren = document.querySelectorAll('li');
+        for (let i = ulListChildren.length - 1; i > ulListChildren.length - 3; i -= 1) {
+          ulList.removeChild(ulListChildren[i]);
+        }
     </script>
   </body>
 </html>
