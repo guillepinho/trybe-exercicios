@@ -1,0 +1,69 @@
+<!--
+click
+dblclick
+change
+scroll
+keydown
+mouseleave
+mouseover
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trybe DOM</title>
+</head>
+<body>
+    <p id="trybe">
+        Vamos aprender a usar eventos?
+    </p>
+
+    <p id="clicar">
+        Parágrafo para ser clicado
+    </p>
+
+    <div>
+        <button id="mouse-over-leave">
+            Botão para ter o mouse passado em cima e removido
+        </button>
+</div>
+<script>
+    // Exemplo 1 - click
+    let clickP = document.getElementById("clicar");
+
+    // Adiciona evento de click
+    clickP.addEventListener("click", recebeClick);
+    clickP.addEventListener("mouseover", mouseEmCima);
+
+    function recebeClick(eventoDeOrigem) {
+        // Objeto evento
+        // As duas principais propriedades:
+        // Target: O elemento que originou o mesmo evento
+        // Type: O tipo de evento que originou o click - mouse, keyboard, screen...
+        console.log(eventoDeOrigem.target);
+        console.log(eventoDeOrigem.type);
+    }
+
+    // Exemplo 2
+    let mouseOverLeaveButton = document.getElementById("mouse-over-leave");
+
+    // Adiciona o evento de mouse over
+    mouseOverLeaveButton.addEventListener("mouseover", mouseEmCima);
+
+    // Adiciona o evento de mouse leave
+    mouseOverLeaveButton.addEventListener("mouseleave", mouseSaiuDoElemento);
+
+    function mouseEmCima(evento) {
+        console.log('Mouse passou por cima');
+        console.log(evento.target);
+    }
+
+    function mouseSaiuDoElemento() {
+        console.log('Mouse saiu do elemento');
+    }
+    </script>
+</body>
+</html>
