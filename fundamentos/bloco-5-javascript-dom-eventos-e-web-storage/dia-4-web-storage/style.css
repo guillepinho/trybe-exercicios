@@ -1,0 +1,125 @@
+body {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+a {
+    font-style: inherit;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.select {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.title {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin: 4px;
+}
+
+.list {
+    list-style-type:none;
+    padding: 0px;
+    margin: 4px;
+}
+
+.list li {
+    display: inline;
+    padding: 16px;
+}
+
+#bg-color {
+    background-color: burlywood;
+}
+
+#font-color {
+    background-color: gainsboro;
+}
+
+#font-size {
+    background-color: lightcoral;
+}
+
+#line-height {
+    background-color: lightblue;
+}
+
+#font-type {
+    background-color: lightgreen;
+}
+
+/* Selectors Styles */
+/* BGs */
+.darkModeBG {
+    background-color: rgb(0, 0, 0);
+}
+
+.yellowBG {
+    background-color: rgb(243, 220, 191);
+}
+
+.whiteBG {
+    background-color: rgb(255, 255, 255);
+}
+/* Font Color */
+.whiteFT {
+    color: rgb(255, 255, 255);
+}
+
+.blackFT {
+    color: rgb(0, 0, 0);
+}
+
+.darkBlueFT {
+    color: rgb(0, 0, 139);
+}
+/* Font Size */
+.sixteen {
+    font-size: 16px;
+}
+
+.eighteen {
+    font-size: 18px;
+}
+
+.twenty {
+    font-size: 20px;
+}
+/* Line Heigth */
+.lt16 {
+    line-height: 16px;
+}
+
+.lt20 {
+    line-height: 20px;
+}
+
+.lt24 {
+    line-height: 24px;
+}
+/* Font Type */
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.monospace {
+    font-family: 'Overpass Mono', monospace;
+}
