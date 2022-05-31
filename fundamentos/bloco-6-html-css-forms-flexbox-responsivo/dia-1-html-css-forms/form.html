@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Eaí, quer viajar com tudo incluso, Tryber?</h1>
+    </header>
+    <main>
+        <form action="" method="get" id="tripForm">
+            <label for="inputName">
+                Nome: <input type="text" name="name" id="inputName" placeholder="Qual seu nome completo?" required
+                    minlength="10" maxlength="40"> *
+            </label>
+            <label for="inputEmail">
+                E-mail: <input type="email" name="email" id="inputEmail" placeholder="Qual seu e-mail?" required
+                    minlength="10" maxlength="40"> *
+            </label>
+            <fieldset id="tripss">
+                <legend>Qual seu destino favorito para viajar? Pense bem! *</legend>
+                <label for="inputCidade">
+                    <input type="radio" name="viagem" id="inputCidade" required class="trip">Cidade
+                </label>
+                <label for="inputCampo">
+                    <input type="radio" name="viagem" id="inputCampo" class="trip">Campo
+                </label>
+                <label for="inputPraia">
+                    <input type="radio" name="viagem" id="inputPraia" class="trip">Praia
+                </label>
+                <label for="inputMontanhas">
+                    <input type="radio" name="viagem" id="inputMontanhas" class="trip">Montanhas
+                </label>
+            </fieldset>
+            <fieldset id="textt">
+                <legend>Por que você deve ser o desenvolvedor(a) vencedora do concurso?</legend>
+                <textarea name="razao" id="inputText" cols="40" rows="10"
+                    placeholder="Nos diga o motivo pelo qual você merece!"></textarea>
+            </fieldset>
+
+            <label for="inputDate">
+                Qual melhor data para sua viagem? <input type="date" name="date" id="inputDate"> *
+            </label>
+            <label for="inputNews"><input type="checkbox" name="noticias" id="inputNews"> Você deseja receber notícias e
+                promoções incríveis em seu e-mail?</label>
+            <label for="inputConditions"><input type="checkbox" name="conditions" id="inputConditions" required> Aceito
+                que
+                as imagens das minhas férias poderão ser usadas na divulgação de concursos futuros da Trybe *.</label>
+                <div id="buttons">
+                    <button type="submit" id="send">Enviar</button>
+                    <button type="reset" id="clean">Limpar</button>
+                </div>
+        </form>
+        <p>Campos obrigatórios foram marcados com *.</p>
+        <div id="infos">
+
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,52 @@
+html {
+    background-color: rgb(35, 167, 35);
+    font-family: 'Tiro Devanagari Marathi', serif;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    width: 80%;
+    padding: 20px;
+    height: 100vh;
+    margin: auto;
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#tripForm {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+label, fieldset {
+    margin: 10px;
+}
+
+#inputName, #inputEmail {
+    width: 50%;
+}
+
+#tripss, #textt {
+    text-align: center;
+}
+
+#buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+button {
+    text-align: center;
+    margin: 2%;
+}
