@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@100&display=swap');
+    </style>
+    <link rel="stylesheet" href="datepicker/dist/css/DatePickerX.min.css">
+    <script src="datepicker/dist/js/DatePickerX.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <p class="title is-2">FORMULÁRIO</p>
+        <p class="subtitle is-4">Concorra a uma viagem XABLAUZONA na faixa!</p>
+        <br>
+    </header>
+    <main>
+        <form id="form" action="" method="GET" enctype="multipart/form-data">
+
+            <div class="field">
+
+                <label class="label" for="inputName">Nome Completo</label>
+
+                <div class="control has-icons-left">
+
+                <input class="input is-sucess" type="text" name="nome" id="inputName" placeholder="Digite o seu nome" required>
+
+                <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+
+                </div>
+            </div>
+
+            <div class="field">
+
+                <label class="label" for="inputEmail">E-mail</label>
+
+                <div class="control has-icons-left">
+
+                    <input class="input" type="email" name="email" id="inputEmail" placeholder="Digite seu e-mail"
+                        required>
+                        
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+
+                </div>
+    
+            </div>
+
+            <div class="field">
+
+                <label class="label" for="inputPassword">Senha</label>
+
+                <div class="control has-icons-left">
+
+                    <input class="input" type="password" name="senha" id="inputPassword" placeholder="Digite uma senha" required>
+
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+
+                </div>
+                
+                <p id="senhaFB" class=""></p>
+    
+            </div>
+
+            <div class="field">
+
+                <label class="label" for="inputDate">Qual melhor dia para sua viagem?</label>
+
+                <div class="control has-icons-left">
+
+                    <input class="input" type="date" name="date"  id="inputDate" required>
+
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-calendar"></i>
+                    </span>
+
+                </div>
+                
+    
+            </div>            
+
+            <div class="field">
+
+                <label class="label" for="inputState">Onde você mora?</label>
+
+                <div class="control">
+
+                    <div class="select">
+
+                        <select name="estado" id="inputState">
+                            <option value="pe">Pernambuco</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="ap">Amapá</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>         
+
+
+
+            <div class="field">
+
+                <label for="inputText" class="label">Por que VOCÊ merece?</label>
+
+                <div class="control">
+
+                    <textarea placeholder="Conta para a gente qual o motivo dessa viagem já ser sua!" class="textarea"  name="promo-text" id="inputText"></textarea>
+
+                </div>
+                
+            </div>
+
+            <div class="field">
+                <div id="photo" class="file is-boxed is-info is-small has-name">
+
+                    <label for="foto-perfil" class="file-label">
+    
+                    <input class="file-input" type="file" name="foto" id="foto-perfil">
+    
+                    <span class="file-cta">
+    
+                        <span class="file-icon">
+    
+                            <i class="fas fa-upload"></i>
+                        </span>
+    
+                        <span class="file-label">
+                            Upload da sua foto
+                        </span>
+    
+                    </span>
+                    <span class="file-name">
+                        Ainda sem arquivo...
+                    </span>
+                </label>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <label for="inputConditions" class="checkbox">
+                        <input type="checkbox" name="aceita" id="inputConditions" required>
+                        Eu aceito os <a href="#">Termos e Condições.</a>
+                    </label>
+                </div>
+            </div>
+
+            <div class="buttons is-flex is-justify-content-space-evenly">
+                <div class="control">
+                    <button id="send" type="submit" class="button is-info m-1">Enviar Formulário</button>
+                </div>
+                <div class="control">
+                    <button type="reset" class="button is-light m-1">Limpar</button>
+                </div>
+            </div>
+
+        </form>
+        <div id="infos">
+            <br>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

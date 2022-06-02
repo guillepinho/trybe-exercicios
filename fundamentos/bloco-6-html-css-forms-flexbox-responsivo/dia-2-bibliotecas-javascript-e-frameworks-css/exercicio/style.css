@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    max-width: 70%;
+    margin: auto;
+    padding: 5%;
+    background-color: #036b52;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+header {
+    text-align: center;
+}
+
+.title, .subtitle, .label  {
+    color: #ffffff;
+}
+
+.file-name {
+    background-color: white;
+    color: darkgray;
+}
+
+a {
+    color: #032b21;
+}
+
+.is-grouped {
+    gap: 20px;
+}
