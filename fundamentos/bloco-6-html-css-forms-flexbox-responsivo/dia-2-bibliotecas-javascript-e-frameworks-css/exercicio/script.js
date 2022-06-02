@@ -1,18 +1,124 @@
+const validation = new JustValidate(
+    '#form',
+    {
+        errorFieldCssClass: 'is-invalid',
+        errorFieldStyle: {
+            border: '1px solid red',
+        },
+        errorLabelCssClass: 'is-label-invalid',
+        errorLabelStyle: {
+            color: 'red',
+            textDecoration: 'underlined',
+        },
+        focusInvalidField: true,
+        lockForm: true,
+        tooltip: {
+            position: 'top',
+        },
+        errorContainer: '.errors-container',
+    }
+);
+
+validation.addField('#inputName', [
+    {
+        rule: 'minLength',
+        value: 10,
+        errorMessage: 'Nome curto, use seu nome completo.'
+    },
+    {
+        rule: 'maxLength',
+        value: 50,
+        errorMessage: 'Nome bastante longo, você pode resumir?',
+    },
+    {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+    }
+])
+.addField('#inputEmail', [
+    {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+    },
+    {
+        rule: 'email',
+        errorMessage: 'E-mail inválido!'
+    }
+])
+.addField('#inputPassword', [
+    {
+        rule: 'password',
+        errorMessage: 'Sua senha deve ter, ao menos, 8 caracteres, sendo no mínimo uma letra e um número.'
+    },
+    {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+    }
+])
+.addField('#inputDate', [
+    {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+    }
+])
+.addField('#inputState', [
+    {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+    }
+])
+.addField('#inputText', [
+    {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+    },
+    {
+        rule: 'minLength',
+        value: 10,
+        errorMessage: 'Escreva alguma coisa, se não, suas chances de ganhar diminuem.'
+    },
+    {
+        rule: 'maxLength',
+        value: 500,
+        errorMessage: 'Opa, sei que você se empolgou, mas que tal diminuir um pouquinho só? O limite é 500 caracteres.',
+    },
+])
+.addField('#foto-perfil', [
+    {
+        rule: 'maxFilesCount',
+        value: 1,
+        errorMessage: 'Apenas um arquivo!',
+    },
+    {
+        rule: 'files',
+        value: {
+            files: {
+                extensions: ['jpeg', 'png', 'jpg', 'jfif'],
+                maxSize: 5000000,
+                types: ['image/jpeg', 'image/png', 'image/jpg', 'image/jfif'],
+            }
+        },
+        errorMessage: 'O arquivo deve ser do tipo jpeg, png, jpg ou jfif e ter até 5MB de tamanho.',
+    }
+])
+.addField('#inputConditions', [
+    {
+        rule: 'required',
+        errorMessage: 'Este campo é obrigatório',
+    },
+]);
+
 const fileInput = document.querySelector('#photo input[type=file]');
 
 function fileChange() {
     if (fileInput.files.length > 0) {
         const fileName = document.querySelector('#photo .file-name');
         fileName.textContent = fileInput.files[0].name;
-      }
+    }
 }
 
 fileInput.addEventListener('change', fileChange);
 
-const sendButton = document.querySelector('#send');
-const inputName = document.querySelector('#inputName');
-const inputEmail = document.querySelector('#inputEmail');
-const inputSenha = document.querySelector('#inputPassword');
 const inputDate = document.querySelector('#inputDate');
 inputDate.DatePickerX.init({
     mondayFirst: false,
@@ -22,134 +128,8 @@ inputDate.DatePickerX.init({
     format: 'yyyy-mm-dd',
     clearButton: false,
     todayButton: false,
-    minDate: function()
-    {
+    minDate: function () {
         var date = new Date();
         return new Date().setDate(date.getDate() + 7);
     },
 });
-const inputText = document.querySelector('#inputText');
-const inputConditions = document.querySelector('#inputConditions');
-const infos = document.querySelector('#infos');
-
-
-const errorList = [];
-
-function checker() {
-    alert('Dados inválidos.');
-    document.location.reload();
-}
-
-function checkName() {
-    const name = inputName.value;
-    if (name.length < 10 || name.length > 50) {
-        errorList.push('erro');
-        return;
-    }
-    const newP = document.createElement('p');
-    newP.innerText = name;
-    newP.classList.add('data');
-    infos.appendChild(newP);
-}
-
-function checkEmail() {
-    const email = inputEmail.value;
-    if (email.length < 10 || email.length > 50 || !email.includes('@')) {
-        errorList.push('erro');
-        return;
-    }
-    const newP = document.createElement('p');
-    newP.innerText = email;
-    newP.classList.add('data');
-    infos.appendChild(newP);
-}
-
-function checkEmail() {
-    const email = inputEmail.value;
-    if (email.length < 10 || email.length > 50 || !email.includes('@')) {
-        errorList.push('erro');
-        return;
-    }
-    const newP = document.createElement('p');
-    newP.innerText = email;
-    newP.classList.add('data');
-    infos.appendChild(newP);
-}
-
-function checkSenhaRN() {
-    const senhaFB = document.querySelector('#senhaFB');
-    if (senhaFB.classList.contains('help')) {
-        senhaFB.classList.remove('help');
-        senhaFB.classList.remove('is-warning');
-    }
-    const senha = inputSenha.value;
-    if (senha.length < 6 || senha.length > 20) {
-        senhaFB.innerText = 'Opa, senha não atende os requisitos mínimos. Use uma senha de, pelo menos, 6 dígitos.';
-        senhaFB.classList.add('help');
-        senhaFB.classList.add('is-warning');
-        return;
-    }
-    senhaFB.innerText = '';
-}
-
-function checkSenha() {
-    const senha = inputSenha.value;
-    if (senha.length < 6 || senha.length > 20) {
-        errorList.push('erro');
-        return;
-    }
-    const newP = document.createElement('p');
-    newP.innerText = senha;
-    newP.classList.add('data');
-    infos.appendChild(newP);
-}
-
-function checkTextArea() {
-    const text = inputText.value;
-    if (text.length > 500 || text.length === 0 || text === '') {
-        errorList.push('erro');
-        return;
-    }
-    const newP = document.createElement('p');
-    newP.innerText = text;
-    newP.classList.add('data');
-    infos.appendChild(newP);
-}
-
-function getDate() {
-    const date = inputDate.value;
-    const newP = document.createElement('p');
-    newP.innerText = date;
-    newP.classList.add('data');
-    infos.appendChild(newP);
-}
-
-function checkCheckBox() {
-    if (inputConditions.checked) {
-        const newP = document.createElement('p');
-        newP.innerText = 'checked';
-        newP.classList.add('data');
-        infos.appendChild(newP);
-    } else {
-        errorList.push('erro');
-    }
-}
-
-function getInfo(event) {
-    event.preventDefault();
-    checkName();
-    checkEmail();
-    checkSenha();
-    getDate();
-    checkTextArea();
-    checkCheckBox();
-    if (errorList.length > 0) {
-        checker();
-    } else {
-        alert('Cadastro feito com sucesso!')
-    }
-}
-
-sendButton.addEventListener('click', getInfo);
-
-inputSenha.addEventListener('keyup', checkSenhaRN);
