@@ -1,0 +1,53 @@
+.main-header {
+    font-weight: 700;
+    font-size: xxx-large;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.bordered {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.main-section {
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+#mandela-picture {
+    width: 30%;
+}
+
+.bio-container {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: justify;
+}
+
+.bio-info {
+    font-size: x-large;
+    width: 60%;
+}
+
+@media screen and (max-width: 768px) {
+    .main-header {
+        font-size: x-large;
+        padding: 5px 0;
+    }
+
+    .bio-container {
+        flex-flow: column nowrap;
+    }
+
+    #mandela-picture {
+        width: 250px;
+    }
+
+    .bio-info {
+        width: 80%;
+        font-size: large;
+    }
+}
