@@ -1,0 +1,2 @@
+#1 - https://github.com/tryber/exercise-magic-card/pull/82
+#2 - https://github.com/tryber/exercise-magic-card/pull/81
