@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 100vh;
+  width: fit-content;
+  margin: auto;
+}
+
+.Header, .Footer, .Card {
+  font-family: Roboto, 'Open-Sans', sans-serif;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px;
+  padding: 20px;
+  margin: auto;
+}
+
+.Header {
+  width: 100%;
+}
+
+.Card {
+  width: 200px;
+}
+
+.Card:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.Footer {
+  font-weight: 100;
+  font-size: 15px;
+  color: darkgray;
+  width: 100%;
+}
