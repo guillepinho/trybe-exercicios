@@ -25,11 +25,11 @@ const conteudos = [
 
 class Content extends Component {
     render() {
-        return (conteudos.map((content) => {
+        return (conteudos.map((content, index) => {
             const { conteudo, status, bloco } = content;
-            return (<p className='Card'><span key={conteudo}>O conteúdo é: {conteudo}.</span><br />
-            <span>Status: {status}.</span><br />
-            <span>Bloco: {bloco}.</span></p>);
+            return (<p className='Card' key={index}>O conteúdo é: {conteudo}.<br />
+            Status: {status}.<br />
+            Bloco: {bloco}.</p>);
         }));
     }
 }
