@@ -27,7 +27,9 @@ class Content extends Component {
     render() {
         return (conteudos.map((content) => {
             const { conteudo, status, bloco } = content;
-            return (<p className='Card'>O conteúdo é: {conteudo}.<br />Status: {status}.<br />Bloco: {bloco}.</p>);
+            return (<p className='Card'><span key={conteudo}>O conteúdo é: {conteudo}.</span><br />
+            <span>Status: {status}.</span><br />
+            <span>Bloco: {bloco}.</span></p>);
         }));
     }
 }
