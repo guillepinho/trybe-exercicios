@@ -1,0 +1,1 @@
+Onde vamos armazenar todos os dados compartilhados da aplicação e é representado por um objeto JS. O State é armazenado no Store do Redux.

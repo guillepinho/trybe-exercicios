@@ -1,0 +1,1 @@
+É o objeto JS que representa alguma mudança/alteração que precisa acontecer no React.

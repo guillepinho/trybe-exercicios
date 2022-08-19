@@ -1,0 +1,1 @@
+É a função JS que despacha a ação (action), objeto, para ser processada pelo Reducer.

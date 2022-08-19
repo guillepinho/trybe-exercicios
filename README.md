@@ -60,7 +60,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [X] 7-2: _JavaScript ES6 - Objects_
-- [X] 7-3: _Testes unitários em JavaScript_
+- [X] 7-3: _Primeiros passos em Jest_
 - [X] 7-4: _[Projeto - JavaScript Testes Unitários]()_
 
 ##### Bloco 8: JavaScript ES6
@@ -71,78 +71,71 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
 - [X] 8-5: _[Projeto - Zoo functions]()_
 
+## Desenvolvimento Front-end :hourglass_flowing_sand:
+
 ##### Bloco 9: Assincronicidade & Callbacks
 
 - [X] 9-1: _JavaScript Assíncrono e Callbacks_
 - [X] 9-2: _JavaScript Promises_
 - [X] 9-3: _[Projeto - Carrinho de Compras]()_
 
-##### Bloco 10: Jest
+##### Bloco 10: Introdução - React
 
-- [X] 10-1: _Primeiros passos no Jest_
-- [X] 10-2: _Jest - Testes Assíncronos_
-- [X] 10-3: _Jest - Simulando comportamentos_
-- [X] 10-4: _[Projeto - Jest Assíncrono e Mocking]()_
+- [X] 10-1: _'Hello, world!' no React!_
+- [X] 10-2: _Componentes React_
+- [X] 10-3: _[Projeto - Solar System]()_
 
-## Desenvolvimento Front-end :hourglass_flowing_sand:
+##### Bloco 11: React - Componentes com Estados, Eventos e Formulários
 
-##### Bloco 11: Introdução - React
+- [X] 11-1: _Components com estado_
+- [X] 11-2: _Eventos e formulários no React_
+- [X] 11-3: _[Projeto - Tryunfo]()_
 
-- [X] 11-1: _'Hello, world!' no React!_
-- [X] 11-2: _Componentes React_
-- [X] 11-3: _[Projeto - Solar System]()_
+##### Bloco 12: React - Ciclo de Vida e React Router
 
-##### Bloco 12: React
+- [X] 12-1: _Melhorando o reuso de componentes: props.children e PropTypes_
+- [X] 12-2: _Ciclo de vida de componentes em React_
+- [X] 12-3: _React Router_
+- [X] 12-4: _[Projeto - TrybeTunes]()_
 
-- [X] 12-1: _Components com estado_
-- [X] 12-2: _Eventos e formulários no React_
-- [ ] 12-3: _[Projeto - Tryunfo]()_
+##### Bloco 13: Metodologias Ágeis
 
-##### Bloco 13: React
+- [X] 13-1: _Metodologias Ágeis_
+- [X] 13-2: _[Projeto - Frontend Online Store]()_
 
-- [ ] 13-1: _Melhorando o reuso de componentes: props.children e PropTypes_
-- [ ] 13-2: _Ciclo de vida de componentes em React_
-- [ ] 13-3: _React Router_
-- [ ] 13-4: _[Projeto - Movie Cards Library CRUD]()_
+##### Bloco 14: Testes em React
 
-##### Bloco 14: Metodologias Ágeis
+- [X] 14-1: _Testando React com a React Testing Library_
+- [X] 14-2: _Testando React com a React Testing Library - Parte 2_
+- [X] 14-3: _[Projeto - Testes em React]()_
 
-- [ ] 14-1: _Metodologias Ágeis_
-- [ ] 14-2: _[Projeto - Frontend Online Store]()_
+##### Bloco 15: Introdução ao Redux - Gerenciamento de Estados
 
-##### Bloco 15: Testes em React
+- [X] 15-1: _Introdução ao Redux_
+- [ ] 15-2: _React com Redux - Parte 1_
+- [ ] 15-3: _React com Redux - PrÃ¡tica_
+- [ ] 15-4: _React com Redux - Parte 2_
+- [ ] 15-5: _Testes síncronos com React-Redux_
+- [ ] 15-6: _[Projeto - Tabela com filtros de dados]()_
 
-- [ ] 15-1: _Testando React com a React Testing Library_
-- [ ] 15-2: _Testando React com a React Testing Library - Parte 2_
-- [ ] 15-3: _[Projeto - Testes em React]()_
+##### Bloco 16: Projeto React
 
-##### Bloco 16: IntroduÃ§Ã£o ao Redux
+- [ ] 16-1: _[Projeto - Jogo de Trivia]()_
 
-- [ ] 16-1: _Introdução ao Redux_
-- [ ] 16-2: _React com Redux - Parte 1_
-- [ ] 16-3: _React com Redux - PrÃ¡tica_
-- [ ] 16-4: _React com Redux - Parte 2_
-- [ ] 16-5: _Testes síncronos com React-Redux_
-- [ ] 16-6: _[Projeto - Tabela com filtros de dados]()_
+##### Bloco 17: React & Context API
 
-##### Bloco 17: Projeto React
+- [ ] 17-1: _Context API do React_
+- [ ] 17-2: _React Hooks - useState e useContext_
+- [ ] 17-3: _React Hooks - useEffect e Hooks customizados_
+- [ ] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
 
-- [ ] 17-1: _[Projeto - Jogo de Trivia]()_
+##### Bloco 18: Projeto Final de Front-end
 
-##### Bloco 18: React & Context API
-
-- [ ] 18-1: _Context API do React_
-- [ ] 18-2: _React Hooks - useState e useContext_
-- [ ] 18-3: _React Hooks - useEffect e Hooks customizados_
-- [ ] 18-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
-
-##### Bloco 19: Projeto Final de Front-end
-
-- [ ] 19-1: _[Projeto - App de Receitas]()_
+- [ ] 18-1: _[Projeto - App de Receitas]()_
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
-##### Bloco 20: Introdução - Bancos de dados relacionais
+##### Bloco 19: Introdução - Bancos de dados relacionais
 
 - [ ] 20-1: _Banco de dados SQL_
 - [ ] 20-2: _Encontrando dados em um banco de dados_

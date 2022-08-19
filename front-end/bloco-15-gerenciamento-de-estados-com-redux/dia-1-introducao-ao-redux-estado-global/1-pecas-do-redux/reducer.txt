@@ -1,0 +1,1 @@
+O Reducer é uma função JS que recebe o estado atual (current state) e a ação corrente (currenct action) e retorna um novo estado (new state). É responsabilidade dessa função decidir o que acontecerá com o estado dado uma ação (action).

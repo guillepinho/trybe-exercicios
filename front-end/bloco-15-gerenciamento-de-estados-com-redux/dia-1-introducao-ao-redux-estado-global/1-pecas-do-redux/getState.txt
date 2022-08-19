@@ -1,0 +1,1 @@
+É a função JS que puxa/recupera o estado (state) do Store.
