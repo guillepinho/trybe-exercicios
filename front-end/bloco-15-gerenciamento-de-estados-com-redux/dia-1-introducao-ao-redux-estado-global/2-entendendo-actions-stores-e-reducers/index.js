@@ -2,18 +2,19 @@ const Redux = require('redux');
 
 const fazerLogin = (email) => ({
   type: "LOGIN",
-  email});
+  email
+});
 
-const ESTADO_INICIAL = { login: false, email: ""};
+const ESTADO_INICIAL = { login: false, email: "" };
 
 const reducer = (state = ESTADO_INICIAL, action) => {
   switch (action.type) {
     case "LOGIN":
-    return {
-      ...state,
-      login: !state.login,
-      email: action.email
-    };
+      return {
+        ...state,
+        login: !state.login,
+        email: action.email
+      };
     default:
       return state;
   }
