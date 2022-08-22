@@ -112,7 +112,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 15: Introdução ao Redux - Gerenciamento de Estados
 
 - [X] 15-1: _Introdução ao Redux_
-- [ ] 15-2: _React com Redux - Parte 1_
+- [X] 15-2: _React com Redux - Parte 1_
 - [ ] 15-3: _React com Redux - PrÃ¡tica_
 - [ ] 15-4: _React com Redux - Parte 2_
 - [ ] 15-5: _Testes síncronos com React-Redux_
