@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.unread {
+  font-weight: 800;
+}
+
+button {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+}
