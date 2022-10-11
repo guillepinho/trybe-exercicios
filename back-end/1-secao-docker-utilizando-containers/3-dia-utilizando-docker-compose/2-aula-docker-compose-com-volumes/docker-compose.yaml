@@ -1,0 +1,39 @@
+version: '3'
+services:
+  frontend: 
+    build: frontend/
+    restart: always
+    ports:
+      - 3000:3000 # primeiro a porta que ficará exposta no PC e depois a porta do serviço
+    depends_on:
+      - backend
+    volumes:
+      - ./logs:/var/log/frontend # caminho no computador : caminho no container - cria uma ponte entre o container do compose e nosso computador local, cria uma pasta em meu computador com os dados do /var/log/frontend
+    networks:
+      - rede-virtual-1 # identifico quais redes esse serviço pode acessar
+  backend:
+    build: backend/
+    restart: always
+    ports:
+      - 3001:3001
+    environment:
+      - DB_HOST=database
+    depends_on:
+      - database
+    networks:
+      - rede-virtual-1 # crio a ponte entre o backend e o frontend
+      - rede-virtual-2 # crio a ponte entre backend e database
+  database: 
+    image: betrybe/docker-compose-example-database:v1
+    restart: always
+    volumes:
+      - dados-do-banco:/data/db # nome do disco virtual : caminho no container
+    networks:
+      - rede-virtual-2 # identifico quais redes esse serviço pode acessar
+
+volumes:
+  dados-do-banco: # especificamos ao compose que ele deve criar um volume virtual com o nome da chave
+
+networks: # ao usar essa chave, o compose não vai mais criar uma rede virtual padrão, como antes
+  rede-virtual-1: # crio a rede virtual 1, criando isolamento entre serviços
+  rede-virtual-2: # crio a rede virtual 2, criando isolamento entre serviços

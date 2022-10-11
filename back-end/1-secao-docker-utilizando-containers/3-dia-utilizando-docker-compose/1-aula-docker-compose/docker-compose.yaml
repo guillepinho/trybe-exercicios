@@ -1,0 +1,28 @@
+version: '3'
+services:
+  frontend: 
+    build: frontend/ # Especificamos o contexto, ou seja, a pasta onde está o Dockerfile.
+    restart: on-failure
+    ports:
+      - 3000:3000 # Segue formato do -p do docker run, primeiro a porta local, depois a porta exposta no container
+    depends_on:
+      - backend
+  backend:
+    build: backend/ # Mesmo caso aqui.
+    restart: on-failure
+    ports:
+      - 3001:3001
+    environment:
+      - DB_HOST=database
+    depends_on:
+      - database
+  database: 
+    image: betrybe/docker-compose-example-database:v1 # Especificamos a Imagem Docker diretamente.
+    restart: on-failure
+
+# docker-compose up -d # o d é de detached, permitindo a execução em segundo plano.
+# docker-compose up -d --build # forçamos a reconstrução dos containers, remontando alguns em que houverem alterações
+# docker-compose down # paramos e removemos todos os containers
+# docker-compose up backend # indicamos que queremos subir especificamente um dos serviços, junto com suas dependências
+# docker-compose logs <nome do serviço> # para vermos o log do container/serviço
+# docker-compose logs --tail <nome do serviço> # para reduzir o numero de linhas que aparecerão
