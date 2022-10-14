@@ -1,0 +1,1 @@
+SELECT * FROM sakila.rental LIMIT 10; -- exibe apenas os 10 primeiros resultados
