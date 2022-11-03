@@ -1,10 +1,8 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const sinon = require('sinon');
-const { get } = require('../../src/app');
 
 const app = require('../../src/app');
-const { execute } = require('../../src/db/connection');
 const connection = require('../../src/db/connection');
 
 const { expect, use } = chai;
