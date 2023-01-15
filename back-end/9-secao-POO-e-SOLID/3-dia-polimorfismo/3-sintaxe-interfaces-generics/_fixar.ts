@@ -70,24 +70,34 @@ class CharacterService {
 // Crie uma classe MockedDbModel que implemente IModel com uma versão mock.
 class MockedDbModel implements IModel {
   async create (character: Character) {
-    const newId = db.length;
-    const newCharacter = { id: newId, ...character };
-    return newCharacter;
+    console.log('Creating character...');  
+    return { id: 1, name: 'Peach', specialMove: 'flowers'};
   }
 
   async readAll () {
-    return db;
+    console.log('Reading db...');  
+    return [{ id: 1, name: 'Peach', specialMove: 'flowers'}];
   }
 
   async update (id: number, character: Character) {
-    const updatedCharacter = { id, ... character };
-    return updatedCharacter;
+    console.log('Updating character...');  
+    return { id: 1, name: 'Peach', specialMove: 'rain of flowers'};
   }
 
   async delete (_id: number) {
+    console.log('Deleting character...');  
     return true;
   }
 }
 
 // Verifique que a classe CharacterService pode receber uma instância tanto de LocalDbModel como de MockedDbModel.
+const firstService = new CharacterService(new MockedDbModel());
+const secondService = new CharacterService(new LocalDbModel());
+
+async function teste() {
+  console.log(await firstService.getAll());
+  console.log(await secondService.getAll());
+}
+
+teste();
 
